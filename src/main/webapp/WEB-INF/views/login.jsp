@@ -13,7 +13,7 @@
 </head>
 <body>
 <div style ='width:100%; text-align:center; padding-top:100px'>
-  <img src='${pageContext.request.contextPath}/resources/img/dog.png' height="250">
+  <img src='${pageContext.request.contextPath}/resources/img/octo.png' height="250">
   <form method="post" action="loginOk">
     <div><label> User ID: </label>
       <input type='text' name='userid'/>

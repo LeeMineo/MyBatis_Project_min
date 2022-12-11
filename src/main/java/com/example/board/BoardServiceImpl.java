@@ -1,12 +1,15 @@
 package com.example.board;
 
+import com.example.board.BoardVO;
+import com.example.board.BoardDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class BoardServiceImpl implements BoardService{
+public class BoardServiceImpl implements BoardService {
+
     @Autowired
     BoardDAO boardDAO;
 
@@ -16,8 +19,8 @@ public class BoardServiceImpl implements BoardService{
     }
 
     @Override
-    public int deleteBoard(int seq){
-        return boardDAO.deleteBoard(seq);
+    public int deleteBoard(int id){
+        return boardDAO.deleteBoard(id);
     }
 
     @Override

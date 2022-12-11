@@ -1,26 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false"
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set var="path" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
 </head>
 <body>
 
-<h1>Add New Post</h1>
-<form action="addok" method="post">
-<table id="list">
-<tr><td>Category:</td><td><input type="text" name="category"/></td></tr>
-<tr><td>Title:</td><td><input type="text" name="title"/></td></tr>
-<tr><td>Writer:</td><td><input type="text" name="writer"/></td></tr>
-<tr><td>Content:</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
-</table>
-<button type="button" onclick="location.href='list'">게시판으로 이동</button>
-<button type="submit"> 등록하기 </button>
+<h1>Add New Book</h1>
+<form action="addok" method="post" >
+    <fieldset style = "width:200px;margin:5px">
+        <legend>책 정보 입력</legend>
+        Title: <input type="text" name="title"/><br><br>
+        Writer: <input type="text" name="writer"/><br><br>
+        Content: <textarea cols="50" rows="5" name="content"></textarea><br><br>
+        Category: <textarea cols="20" rows="5" name="category"></textarea><br><br>
+        Read_OR_Not: <input type="radio" name = "read_yn" value = "0" checked> NO
+        <input type="radio"  name = "read_yn" value = "1">YES <br><br>
+        <input type="submit" value="Add Post"/><br><br>
+    </fieldset><br>
 
+    <table>
+        <tr><td><a href="list">View All Records</a></td><td align="right"></td></tr>
+    </table>
 </form>
 
 </body>
